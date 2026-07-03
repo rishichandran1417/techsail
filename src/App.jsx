@@ -26,7 +26,7 @@ export default function App() {
       <QuoteCTA />
       <ContactSection />
       <Footer />
-      <VideoModal open={videoOpen} onClose={() => setVideoOpen(false)} />
+      
     </div>
   );
 }
