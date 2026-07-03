@@ -34,7 +34,7 @@ techsail-engineering-website/
         ├── ContactSection.jsx  # Contact Us section with embedded Google Map
         ├── Footer.jsx
         ├── LegalModal.jsx      # Modal for Privacy Policy / Terms
-        └── VideoModal.jsx
+        └──
 ```
 
 ## Getting Started

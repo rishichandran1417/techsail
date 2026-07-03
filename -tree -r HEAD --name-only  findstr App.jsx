@@ -9,15 +9,15 @@ import WhyChooseUs from "./components/WhyChooseUs";
 import QuoteCTA from "./components/QuoteCTA";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
-
+import VideoModal from "./components/VideoModal";
 
 export default function App() {
-  
+  const [videoOpen, setVideoOpen] = useState(false);
 
   return (
     <div className="font-sans antialiased">
       <Header />
-      <Hero  />
+      <Hero onWatchVideo={() => setVideoOpen(true)} />
       <Services />
       <StatsBar />
       <Industries />
