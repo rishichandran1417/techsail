@@ -2,25 +2,47 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { GREEN_LIGHT, NAVY } from "../constants";
 
-export default function ProcessStep({ icon: Icon, step, title, desc, isLast }) {
+export default function ProcessStep({
+  icon: Icon,
+  step,
+  title,
+  desc,
+  isLast,
+}) {
   return (
-    <div className="flex items-start lg:items-center gap-4 flex-1">
-      <div className="flex flex-col items-center gap-3 lg:items-start lg:flex-1">
+    <div className="relative flex-1">
+
+      <div className="bg-white border border-gray-200 rounded-2xl p-6 h-full hover:shadow-xl transition duration-300">
+
         <div
-          className="w-14 h-14 rounded-full flex items-center justify-center"
+          className="w-14 h-14 rounded-full flex items-center justify-center mb-5"
           style={{ backgroundColor: GREEN_LIGHT }}
         >
-          <Icon className="w-6 h-6" style={{ color: NAVY }} strokeWidth={1.75} />
+          <Icon
+            className="w-6 h-6"
+            style={{ color: NAVY }}
+            strokeWidth={1.8}
+          />
         </div>
-        <div>
-          <p className="font-bold text-gray-900 text-sm mb-1">
-            {step}. {title}
-          </p>
-          <p className="text-xs text-gray-500 leading-relaxed max-w-[180px]">{desc}</p>
-        </div>
+
+        <span className="text-xs font-bold text-gray-400">
+          STEP {step}
+        </span>
+
+        <h3 className="mt-2 text-xl font-bold text-gray-900">
+          {title}
+        </h3>
+
+        <p className="mt-3 text-gray-600 leading-7">
+          {desc}
+        </p>
       </div>
+
       {!isLast && (
-        <ArrowRight className="hidden lg:block w-5 h-5 text-gray-300 shrink-0 mt-6" />
+        <ArrowRight
+          className="hidden lg:block absolute top-1/2 -right-6 -translate-y-1/2 text-gray-300"
+          size={26}
+        />
       )}
     </div>
   );

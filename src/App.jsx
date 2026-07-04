@@ -10,23 +10,43 @@ import QuoteCTA from "./components/QuoteCTA";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 
+// Careers
+import CareersHero from "./components/careers/CareersHero";
+import CareersModal from "./components/careers/CareersModal";
 
 export default function App() {
-  
+  const [careersOpen, setCareersOpen] = useState(false);
 
   return (
     <div className="font-sans antialiased">
       <Header />
-      <Hero  />
+
+      <Hero />
+
       <Services />
+
       <StatsBar />
+
       <Industries />
+
       <Process />
+
       <WhyChooseUs />
+
       <QuoteCTA />
+
+      <CareersHero
+        onOpen={() => setCareersOpen(true)}
+      />
+
       <ContactSection />
+
       <Footer />
-      
+
+      <CareersModal
+        open={careersOpen}
+        onClose={() => setCareersOpen(false)}
+      />
     </div>
   );
 }
