@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Linkedin, Facebook, Twitter, Instagram, Phone, Mail, MapPin, Settings } from "lucide-react";
+import { Linkedin, Facebook, Twitter, Instagram, Phone, Mail, MapPin } from "lucide-react";
 import { NAV_MAP, NAVY_DARK, COMPANY, scrollToId } from "../constants";
 import { PRIVACY_POLICY, TERMS_AND_CONDITIONS } from "../content/policyContent";
 import LegalModal from "./LegalModal";
+import logo from "../assets/techsail.jpg";
 
 const COLUMNS = [
   {
@@ -54,13 +55,18 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid sm:grid-cols-2 lg:grid-cols-5 gap-10">
         <div className="lg:col-span-1 sm:col-span-2">
           <div className="flex items-center gap-2 mb-3">
-            <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center">
-              <Settings className="w-4 h-4 text-white" />
-            </div>
-            <div>
-              <p className="font-bold text-white text-sm">{COMPANY.name}</p>
-              <p className="text-[10px] text-gray-400 -mt-0.5">{COMPANY.tagline}</p>
-            </div>
+            
+           <div className="mb-5">
+  <img
+    src={logo}
+    alt={COMPANY.name}
+    className="h-16 w-auto object-contain"
+  />
+
+  <p className="text-xs text-gray-400 mt-2">
+    {COMPANY.tagline}
+  </p>
+</div>
           </div>
           <p className="text-xs leading-relaxed text-gray-400 mb-5 max-w-xs">
             Affordable, quality-driven facility management and engineering

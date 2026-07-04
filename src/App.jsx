@@ -9,7 +9,7 @@ import WhyChooseUs from "./components/WhyChooseUs";
 import QuoteCTA from "./components/QuoteCTA";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
-
+import WhatsAppButton from "./components/WhatsAppButton";
 // Careers
 import CareersHero from "./components/careers/CareersHero";
 import CareersModal from "./components/careers/CareersModal";
@@ -42,6 +42,7 @@ export default function App() {
       <ContactSection />
 
       <Footer />
+      <WhatsAppButton />
 
       <CareersModal
         open={careersOpen}
