@@ -13,13 +13,13 @@ export default function Hero({ onWatchVideo }) {
   return (
     <section
       id="home"
-      className="relative h-[65vh] sm:h-[75vh] lg:h-[90vh] flex items-center overflow-hidden"
+      className="relative h-[65vh] sm:h-[75vh] lg:h-[90vh] flex items-center overflow-hidden bg-black"
     >
       {/* Background Image */}
       <img
         src={heroImage}
         alt="Techsail Engineering team on-site"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-contain"
         loading="lazy"
       />
 
