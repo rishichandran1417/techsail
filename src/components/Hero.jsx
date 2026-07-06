@@ -13,7 +13,7 @@ export default function Hero({ onWatchVideo }) {
   return (
     <section
       id="home"
-      className="relative min-h-[85vh] lg:min-h-screen flex items-center overflow-hidden scroll-mt-20"
+      className="relative h-[65vh] sm:h-[75vh] lg:h-[90vh] flex items-center overflow-hidden"
     >
       {/* Background Image */}
       <img
