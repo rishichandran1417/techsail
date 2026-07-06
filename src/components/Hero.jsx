@@ -13,7 +13,7 @@ export default function Hero({ onWatchVideo }) {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden scroll-mt-20"
+      className="relative min-h-[85vh] lg:min-h-screen flex items-center overflow-hidden scroll-mt-20"
     >
       {/* Background Image */}
       <img
@@ -23,58 +23,56 @@ export default function Hero({ onWatchVideo }) {
         loading="lazy"
       />
 
-      {/* Gradient Overlay — darkest on the left where text sits */}
+      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full">
-        <div className="max-w-3xl">
-          <h1
-            className="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight text-white"
-            style={{ textShadow: "0 4px 20px rgba(0,0,0,0.35)" }}
+      <div className="relative z-10 max-w-2xl mx-auto px-6 lg:px-10">
+        <h1
+          className="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight text-white"
+          style={{ textShadow: "0 4px 20px rgba(0,0,0,0.35)" }}
+        >
+          Reliable Facilities.
+          <br />
+          <span style={{ color: GREEN }}>Engineered Right.</span>
+        </h1>
+
+        <p
+          className="mt-6 text-lg text-gray-200 leading-8"
+          style={{ textShadow: "0 2px 10px rgba(0,0,0,0.3)" }}
+        >
+          We deliver affordable, quality-driven facility management and
+          engineering solutions built by engineers who get the details
+          right every single day.
+        </p>
+
+        <div className="mt-10 flex flex-col sm:flex-row gap-4">
+          <button
+            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-3.5 rounded-md text-white font-semibold text-sm transition hover:opacity-90 active:scale-[0.98]"
+            style={{ backgroundColor: GREEN }}
+            onClick={() => scrollToId("services")}
           >
-            Reliable Facilities.
-            <br />
-            <span style={{ color: GREEN }}>Engineered Right.</span>
-          </h1>
+            Explore Services
+            <ArrowRight className="w-4 h-4" />
+          </button>
 
-          <p
-            className="mt-6 text-lg text-gray-200 max-w-2xl leading-8"
-            style={{ textShadow: "0 2px 10px rgba(0,0,0,0.3)" }}
+          <button
+            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-3.5 rounded-md border-2 border-white text-white font-semibold text-sm transition hover:bg-white/10 active:scale-[0.98]"
+            onClick={() => scrollToId("contact")}
           >
-            We deliver affordable, quality-driven facility management and
-            engineering solutions built by engineers who get the details
-            right every single day.
-          </p>
+            Contact Us
+          </button>
+        </div>
 
-          <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <button
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-3.5 rounded-md text-white font-semibold text-sm transition hover:opacity-90 active:scale-[0.98]"
-              style={{ backgroundColor: GREEN }}
-              onClick={() => scrollToId("services")}
-            >
-              Explore Services
-              <ArrowRight className="w-4 h-4" />
-            </button>
-
-            <button
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-3.5 rounded-md border-2 border-white text-white font-semibold text-sm transition hover:bg-white/10 active:scale-[0.98]"
-              onClick={() => scrollToId("contact")}
-            >
-              Contact Us
-            </button>
-          </div>
-
-          <div className="mt-12 flex flex-wrap gap-8 text-white">
-            {badges.map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-2.5">
-                <Icon className="w-5 h-5" strokeWidth={1.75} />
-                <p className="text-xs font-medium whitespace-pre-line leading-snug">
-                  {label}
-                </p>
-              </div>
-            ))}
-          </div>
+        <div className="mt-12 flex flex-wrap gap-8 text-white">
+          {badges.map(({ icon: Icon, label }) => (
+            <div key={label} className="flex items-center gap-2.5">
+              <Icon className="w-5 h-5" strokeWidth={1.75} />
+              <p className="text-sm font-medium whitespace-pre-line leading-snug">
+                {label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
